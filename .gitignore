@@ -1,0 +1,7 @@
+.env
+records/
+*.json
+venv/
+__pycache__/
+*.png
+*.jpeg
