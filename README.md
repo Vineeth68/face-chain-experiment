@@ -13,25 +13,6 @@ Built to audit unauthorized photo re-use and establish proof-of-existence withou
 3. **Integrity Packaging:** Generates a structured JSON record containing image hashes, metadata, and matched sources.
 4. **On-Chain Notarization:** Hashes the record (SHA-256) and logs it into transaction calldata on Polygon Amoy via `web3.py`.
 
----
-
-Target Image
-│
-▼
-[face_encode.py]        --> dlib 128-d embedding extraction
-│
-▼
-[reverse_search.py]     --> SerpApi (Google Lens index query)
-│
-▼
-[pipeline.py]           --> Build normalized audit record (JSON)
-│
-▼
-[blockchain_logger.py]  --> Broadcast zero-value tx with record digest in calldata
-│
-▼
-records/.json     --> Saved locally with PolygonScan tx receipt
----
 
 ## Tech Stack
 
